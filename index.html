@@ -1,0 +1,37 @@
+<!-- If the given input is an array of numbers, return the sum of all the positives ones. If the array is empty or there aren't any positive numbers, return 0. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <h3>If the given input is an array of numbers, return the sum of all the positives ones. If the array is empty or there aren't any positive numbers, return 0.</h3>
+    <p id="q1"></p>
+</body>
+<script>
+    const input = [ 1, -4, 12, 0, -3, 29, -150];
+    let sum=0;
+    input.forEach(sumPositive);
+function sumPositive(value) {
+    if(value>0){
+        sum+=value;
+    } 
+}
+let result = checkPositive(sum);
+function checkPositive(sum){
+    if(input.length==0){
+        return 0;
+    }
+    else if(sum == 0){
+        return 0;
+    }
+    else{
+        return sum;
+    }
+}
+    document.getElementById("q1").innerHTML=result;
+</script>
+</html>
